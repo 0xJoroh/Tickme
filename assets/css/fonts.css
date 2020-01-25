@@ -1,0 +1,86 @@
+/* @import 'https://pro-next.fontawesome.com/releases/v5.7.2/css/all.css'; */
+
+@font-face {
+	font-family: 'Dry-brush';
+	src: url('../fonts/Dry-Brush/Dry-Brush.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Montserrat-back';
+	src: url('../fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Montserrat-bold';
+	src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Montserrat-light';
+	src: url('../fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: "Font Awesome 5 Brands";
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url(../fonts/webfonts/fa-brands-400.eot);
+	src: url(../fonts/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/webfonts/fa-brands-400.woff2) format("woff2"),
+		url(../fonts/webfonts/fa-brands-400.woff) format("woff"),
+		url(../fonts/webfonts/fa-brands-400.ttf) format("truetype"),
+		url(../fonts/webfonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+
+@font-face {
+	font-family: "Font Awesome 5 Pro";
+	font-style: normal;
+	font-weight: 300;
+	font-display: auto;
+	src: url(../fonts/webfonts/fa-light-300.eot);
+	src: url(../fonts/webfonts/fa-light-300.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/webfonts/fa-light-300.woff2) format("woff2"),
+		url(../fonts/webfonts/fa-light-300.woff) format("woff"),
+		url(../fonts/webfonts/fa-light-300.ttf) format("truetype"),
+		url(../fonts/webfonts/fa-light-300.svg#fontawesome) format("svg")
+}
+
+@font-face {
+	font-family: "Font Awesome 5 Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: url(../fonts/webfonts/fa-regular-400.eot);
+	src: url(../fonts/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/webfonts/fa-regular-400.woff2) format("woff2"),
+		url(../fonts/webfonts/fa-regular-400.woff) format("woff"),
+		url(../fonts/webfonts/fa-regular-400.ttf) format("truetype"),
+		url(../fonts/webfonts/fa-regular-400.svg#fontawesome) format("svg")
+}
+
+@font-face {
+	font-family: "Font Awesome 5 Pro";
+	font-style: normal;
+	font-weight: 900;
+	font-display: auto;
+	src: url(../fonts/webfonts/fa-solid-900.eot);
+	src: url(../fonts/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/webfonts/fa-solid-900.woff2) format("woff2"),
+		url(../fonts/webfonts/fa-solid-900.woff) format("woff"),
+		url(../fonts/webfonts/fa-solid-900.ttf) format("truetype"),
+		url(../fonts/webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}

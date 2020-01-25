@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" dir="ltr" lang="de">
+<!--<![endif]-->
+
+<head>
+  <title>Tickme | Browse</title>
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Meta Description, Keywords and Author -->
+  <meta name="Keywords" content="">
+  <meta name="author" content="">
+  <meta name="Description" content="">
+
+  <!-- CSS
+  ================================================== -->
+  <!-- favicon.ico -->
+  <link rel="shortcut icon" href="../assets/img/tickme.ico">
+  <!-- Stylesheet -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- JavaScript
+	================================================== -->
+  <!--[if lt IE 9]>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	   <![endif]-->
+
+  <!-- Modernizer Script for old Browsers -->
+  <!--script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script-->
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark py-3" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="../">
+        <img src="../assets/img/tickme1.png" width="130" alt="Tickme">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item d-flex justify-content-center align-items-center ml-2">
+            <a class="main-btn-outline d-block" href="#">
+              <i class="far fa-user mr-2"></i>my profile
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="browse" class="container">
+    <h1 class="title">Browse events</h1>
+    <div class="d-flex justify-content-between">
+      <div>
+        <select class="select-btn">
+          <option>All categories <span>(928)</span></option>
+        </select>
+        <button class="filters-btn" id="toggle-filters">Hide filters <i class="fas fa-sort-down"></i></button>
+      </div>
+      <div>
+        <select class="select-btn">
+          <option>Newest First</option>
+        </select>
+      </div>
+    </div>
+    <form class="filters d-none" id="filters">
+      <div>
+        <label>Keywords</label>
+        <div class="filter-hold rounded">
+          <i class="fas fa-search"></i>
+          <input type="text" class="search-input" placeholder="search...">
+        </div>
+      </div>
+      <div>
+        <label>Price</label>
+        <div class="d-flex">
+          <div class="filter-hold rounded-left">
+            <i class="fas fa-dollar-sign"></i>
+            <input type="text" placeholder="Min">
+          </div>
+          <div class="filter-hold rounded-right">
+            <i class="fas fa-dollar-sign"></i>
+            <input type="text" placeholder="Max">
+          </div>
+        </div>
+      </div>
+      <div class="ev-radio-btn">
+        <label>Event Status</label>
+        <div class="d-flex">
+          <div class="filter-hold rounded-left p-0">
+            <input type="radio" name="ev-status" id="ev-open">
+            <label for="ev-open">Open</label>
+          </div>
+          <div class="filter-hold rounded-right p-0">
+            <input type="radio" name="ev-status" id="ev-finished">
+            <label for="ev-finished">Finished</label>
+          </div>
+        </div>
+      </div>
+      <div class="ev-radio-btn">
+        <label>Private</label>
+        <div class="d-flex">
+          <div class="filter-hold rounded-left p-0">
+            <input type="radio" name="ev-private" id="ev-public">
+            <label for="ev-public"><i class="fas fa-unlock"></i></label>
+          </div>
+          <div class="filter-hold rounded-right p-0">
+            <input type="radio" name="ev-private" id="ev-private">
+            <label for="ev-private"><i class="fas fa-lock"></i></label>
+          </div>
+        </div>
+      </div>
+      <div class="ev-radio-btn">
+        <label>Paid</label>
+        <div class="d-flex">
+          <div class="filter-hold rounded-left p-0">
+            <input type="radio" name="ev-paid" id="ev-paid">
+            <label for="ev-paid"><i class="fal fa-badge-dollar"></i></label>
+          </div>
+          <div class="filter-hold rounded-right p-0">
+            <input type="radio" name="ev-paid" id="ev-free">
+            <label for="ev-free">!<i class="fal fa-badge-dollar"></i></label>
+          </div>
+        </div>
+      </div>
+      <div class="ev-radio-btn">
+        <label>Tracking</label>
+        <div class="d-flex">
+          <div class="filter-hold rounded-left p-0">
+            <input type="radio" name="ev-tracking" id="ev-tracking">
+            <label for="ev-tracking"><i class="fas fa-angle-double-right"></i></label>
+          </div>
+          <div class="filter-hold rounded-right p-0">
+            <input type="radio" name="ev-tracking" id="ev-no-tracking">
+            <label for="ev-no-tracking">!<i class="fas fa-angle-double-right"></i></label>
+          </div>
+        </div>
+      </div>
+      <div class="ev-radio-btn" style="min-width: 163px;">
+        <label>Days eft</label>
+        <div class="d-flex">
+          <div class="filter-hold rounded-left p-0">
+            <input type="radio" name="ev-days" id="ev-one">
+            <label for="ev-one">&lt;1</label>
+          </div>
+          <div class="filter-hold p-0">
+            <input type="radio" name="ev-days" id="ev-tt">
+            <label for="ev-tt">2-3</label>
+          </div>
+          <div class="filter-hold p-0">
+            <input type="radio" name="ev-days" id="ev-fs">
+            <label for="ev-fs">4-7</label>
+          </div>
+          <div class="filter-hold rounded-right p-0">
+            <input type="radio" name="ev-days" id="ev-sp">
+            <label for="ev-sp">7+</label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="main-btn-outline" type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </form>
+    <div class="events-list py-5">
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <div>
+            <img src="../assets/img/eventes/1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="ev-content">
+            <h2>Game Of Thrones Premiere</h2>
+            <p>Lorem IpsumNim ad minim veniam, quis nostrud exertion ullamco eniam, quis nostrud
+              consequat. Enim ad minim veniam.Quis nostrud exeonullamenim ad minim veniam
+              rcitation ullamcn ostrud. Exercitation.
+              Nim ad minim veniam, quis nostrud exertion ullamco laboris nisi ad minim veniamuis
+              rcitation ullamcn ostrud. Exercitation ullamco exertio nostru...</p>
+            <i>By <span>Emilia Clarke</span></i>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <ul class="ev-side-info">
+            <li><i class="date-icon"></i><span>14/04/2019</span></li>
+            <li><i class="clock-icon"></i><span>09:00 pm</span></li>
+            <li><i class="location-icon"></i><span>City Hall, New York</span></li>
+            <li><button class="main-btn m-0" data-toggle="modal" data-target="#ev-infos">See more</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <div>
+            <img src="../assets/img/eventes/1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="ev-content">
+            <h2>Game Of Thrones Premiere</h2>
+            <p>Lorem IpsumNim ad minim veniam, quis nostrud exertion ullamco eniam, quis nostrud
+              consequat. Enim ad minim veniam.Quis nostrud exeonullamenim ad minim veniam
+              rcitation ullamcn ostrud. Exercitation.
+              Nim ad minim veniam, quis nostrud exertion ullamco laboris nisi ad minim veniamuis
+              rcitation ullamcn ostrud. Exercitation ullamco exertio nostru...</p>
+            <i>By <span>Emilia Clarke</span></i>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <ul class="ev-side-info">
+            <li><i class="date-icon"></i><span>14/04/2019</span></li>
+            <li><i class="clock-icon"></i><span>09:00 pm</span></li>
+            <li><i class="location-icon"></i><span>City Hall, New York</span></li>
+            <li><button class="main-btn m-0" data-toggle="modal" data-target="#ev-infos">See more</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <div>
+            <img src="../assets/img/eventes/1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="ev-content">
+            <h2>Game Of Thrones Premiere</h2>
+            <p>Lorem IpsumNim ad minim veniam, quis nostrud exertion ullamco eniam, quis nostrud
+              consequat. Enim ad minim veniam.Quis nostrud exeonullamenim ad minim veniam
+              rcitation ullamcn ostrud. Exercitation.
+              Nim ad minim veniam, quis nostrud exertion ullamco laboris nisi ad minim veniamuis
+              rcitation ullamcn ostrud. Exercitation ullamco exertio nostru...</p>
+            <i>By <span>Emilia Clarke</span></i>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <ul class="ev-side-info">
+            <li><i class="date-icon"></i><span>14/04/2019</span></li>
+            <li><i class="clock-icon"></i><span>09:00 pm</span></li>
+            <li><i class="location-icon"></i><span>City Hall, New York</span></li>
+            <li><button class="main-btn m-0" data-toggle="modal" data-target="#ev-infos">See more</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <div>
+            <img src="../assets/img/eventes/1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="ev-content">
+            <h2>Game Of Thrones Premiere</h2>
+            <p>Lorem IpsumNim ad minim veniam, quis nostrud exertion ullamco eniam, quis nostrud
+              consequat. Enim ad minim veniam.Quis nostrud exeonullamenim ad minim veniam
+              rcitation ullamcn ostrud. Exercitation.
+              Nim ad minim veniam, quis nostrud exertion ullamco laboris nisi ad minim veniamuis
+              rcitation ullamcn ostrud. Exercitation ullamco exertio nostru...</p>
+            <i>By <span>Emilia Clarke</span></i>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <ul class="ev-side-info">
+            <li><i class="date-icon"></i><span>14/04/2019</span></li>
+            <li><i class="clock-icon"></i><span>09:00 pm</span></li>
+            <li><i class="location-icon"></i><span>City Hall, New York</span></li>
+            <li><button class="main-btn m-0" data-toggle="modal" data-target="#ev-infos">See more</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <div>
+            <img src="../assets/img/eventes/1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="ev-content">
+            <h2>Game Of Thrones Premiere</h2>
+            <p>Lorem IpsumNim ad minim veniam, quis nostrud exertion ullamco eniam, quis nostrud
+              consequat. Enim ad minim veniam.Quis nostrud exeonullamenim ad minim veniam
+              rcitation ullamcn ostrud. Exercitation.
+              Nim ad minim veniam, quis nostrud exertion ullamco laboris nisi ad minim veniamuis
+              rcitation ullamcn ostrud. Exercitation ullamco exertio nostru...</p>
+            <i>By <span>Emilia Clarke</span></i>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <ul class="ev-side-info">
+            <li><i class="date-icon"></i><span>14/04/2019</span></li>
+            <li><i class="clock-icon"></i><span>09:00 pm</span></li>
+            <li><i class="location-icon"></i><span>City Hall, New York</span></li>
+            <li><button class="main-btn m-0" data-toggle="modal" data-target="#ev-infos">See more</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <div>
+            <img src="../assets/img/eventes/1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="ev-content">
+            <h2>Game Of Thrones Premiere</h2>
+            <p>Lorem IpsumNim ad minim veniam, quis nostrud exertion ullamco eniam, quis nostrud
+              consequat. Enim ad minim veniam.Quis nostrud exeonullamenim ad minim veniam
+              rcitation ullamcn ostrud. Exercitation.
+              Nim ad minim veniam, quis nostrud exertion ullamco laboris nisi ad minim veniamuis
+              rcitation ullamcn ostrud. Exercitation ullamco exertio nostru...</p>
+            <i>By <span>Emilia Clarke</span></i>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <ul class="ev-side-info">
+            <li><i class="date-icon"></i><span>14/04/2019</span></li>
+            <li><i class="clock-icon"></i><span>09:00 pm</span></li>
+            <li><i class="location-icon"></i><span>City Hall, New York</span></li>
+            <li><button class="main-btn m-0" data-toggle="modal" data-target="#ev-infos">See more</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Modal -->
+  <div class="modal fade" id="ev-infos" tabindex="-1" role="dialog" aria-labelledby="ev-infosTitle" aria-hidden="true">
+    <div class="profile">
+      <img src="../assets/img/uploads/avatar/avatar.jpg" alt="Profile">
+      <div>
+        <h3>Scarlett Johansson</h3>
+        <small>Marvel entertainment</small>
+      </div>
+    </div>
+    <div class="modal-dialog modal-dialog-centered mt-0" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="ev-infosTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="ev-cover text-center">
+            <img src="../assets/img/slider3.jpg" alt="">
+          </div>
+          <div>
+            <p class="paragraph">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+              page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500,
+              quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de
+              polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique
+              informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la
+              vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion
+              dans
+              des applications de mise en page de texte, comme Aldus PageMaker.
+              Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
+              impression.
+              Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur
+              anonyme
+              assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas
+              fait
+              que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu
+              n'en
+              soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des
+              passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de
+              texte, comme Aldus PageMaker.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="d-flex justify-content-between prefooter">
+        <div>
+          <img src="../assets/img/tickme1.png" width="150" alt="">
+          <p class="d-inline-block ml-3">2019 © All copyrights reserved to tickme Inc. </p>
+        </div>
+
+        <div class="terms-privacy">
+          <ul class="d-flex justify-content-between">
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#browse" class="to-top"><i class="to-top-icon"></i></a>
+  <!-- Plugins
+	================================================== -->
+
+  <!-- jQuery -->
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <!-- Application -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
